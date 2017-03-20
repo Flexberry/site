@@ -753,7 +753,7 @@ NAV
     display: inline-block;
     width: 110px;
     height: 90px;
-    background-image: url('../img/logo-last.png');
+    background-image: url('https://flexberry.github.io/site/img/logo-last.png');
     background-position: 0 4.37px !important;
     background-repeat: no-repeat;
     z-index: 1000;
@@ -788,7 +788,7 @@ Flexberry Slider
 
 .flexberry-slider .flexberry-sheet, .page-header {
   background-color: #7c7ccf;
-  background-image: url('../img/bg.png');
+  background-image: url('https://flexberry.github.io/site/img/bg.png');
   background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
