@@ -4,8 +4,15 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@font-face {
+    font-family: HelveticaThin; /* Гарнитура шрифта */
+    src: url('https://flexberry.github.io/site/css/fonts/HelveticaLight/HelveticaLight.ttf'); /* Путь к файлу со шрифтом */ 
+}
+
 body {
     overflow-x: hidden;
+    color: #555555;
+    font-family: HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 p {
@@ -23,7 +30,10 @@ a:active,
 a.active {
     outline: 0;
     color: #28284D;
+    text-decoration: none;
 }
+
+
 
 h1,
 h2,
@@ -31,9 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 /*
@@ -128,7 +136,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -178,9 +186,7 @@ header .intro-text .skills {
 }
 
 .navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .navbar a:focus {
@@ -189,6 +195,13 @@ header .intro-text .skills {
 
 .navbar .navbar-nav {
     letter-spacing: 1px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
 
 .navbar .navbar-nav li a:focus {
@@ -200,18 +213,25 @@ header .intro-text .skills {
     border: 0;
 }
 
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #555;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
 section {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2.3em;
+    margin-bottom: 35px;
+    padding-top: 70px;
 }
 
-section.success {
-    color: #fff;
-    background: #7c7ccf;
+.flexslider h2{
+    padding-top: 10px;
 }
 
 @media(max-width:767px) {
@@ -227,7 +247,13 @@ section.success {
 .portfolio-item {
     right: 0;
     margin: 0 0 15px;
-    min-height: 200px;
+    min-height: 230px;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.education-item{
+    margin: 0 0 30px;
 }
 
 .portfolio-item .portfolio-link {
@@ -235,6 +261,16 @@ section.success {
     position: relative;
     margin: 0 auto;
     max-width: 400px;
+}
+
+
+span.item-head{
+text-decoration: none;
+border-bottom: 1px solid rgba(101, 15, 139, 0.3);
+}
+
+a span.item-head:hover{
+  border-bottom:none;  
 }
 
 .portfolio-item .portfolio-link .caption {
@@ -282,22 +318,61 @@ section.success {
     }
 }
 
+.btn-md, .btn-lg{
+    border-radius: 50px;
+}
+.btn-md{
+    padding: 4px 30px;
+}
+
+.btn-lg{    
+    padding: 15px 60px;
+    margin-bottom: 40px;
+}
+
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #28284D;
-    font-size: 20px;
-    color: #28284D;
+    border: solid 1px rgba(101, 15, 139, 0.3);    
+    color: #650f8b;
     background: 0 0;
     transition: all .3s ease-in-out;
+}
+
+.btn-light{
+     border: 1px solid; /* стили рамки */
+    -moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 10px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:10px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 50px;
+}
+
+.btn-fill{
+    margin-top: 15px;
+    border: solid 1px rgba(101, 15, 139, 0.3);
+    color: #fff;
+    background: #10c0de;
+    transition: all .3s ease-in-out;
+}
+
+.btn-fill:hover,
+.btn-fill:focus,
+.btn-fill:active,
+.btn-fill.active {
+    color: #fff;
+    background: #10c0de;
+    border: solid 1px rgba(101, 15, 139, 0.3);
+    -webkit-box-shadow: 0px 15px 30px #555;
+    -moz-box-shadow: 0px 5px 30px #555;
+    box-shadow: 0px 5px 30px #555;
 }
 
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #48486D;
-    color: #7c7ccf;
-    background: #fff;
+    border: solid 1px #10c0de;
+    color: #fff;
+    background: #10c0de;
 }
 
 .floating-label-form-group {
@@ -366,7 +441,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #2c3e50;
+    background-color: #f4f4f4;
 }
 
 footer .footer-col {
@@ -493,8 +568,9 @@ NAV
 /*Mega Menu
 ------------------------------------*/
 .mega-menu {
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  /*background: #870780;*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#93047b+0,4e1493+100 */
+background: none;
 }
 
 .mega-menu .nav,
@@ -502,6 +578,7 @@ NAV
 .mega-menu .dropdown,
 .mega-menu .collapse {
     position: static;
+    padding-top: 8px;
 }
 
 .mega-menu .navbar-inner,
@@ -550,6 +627,8 @@ NAV
     left: 0;
     right: 0;
     overflow: hidden;
+    border-radius: 5px;
+    top:inherit;
 }
 
 @media (min-width: 992px) {
@@ -563,7 +642,6 @@ NAV
     border-radius: 0;
     background: #fff;
     z-index: 9999 !important;
-    border-top: solid 3px #7c7ccf;
   }
   .dropdown-menu li a {
     color: #777;
@@ -598,7 +676,6 @@ NAV
   font-size: 15px;
   font-weight: 400;
   padding: 0 10px 0 13px;
-  text-transform: uppercase;
 }
 
 /*Space for only Big Resolution*/
@@ -610,7 +687,7 @@ NAV
 
 @media (min-width: 992px) {
     .mega-menu .equal-height-in {
-        padding: 20px 0;
+        padding: 20px;
         border-left: 1px solid #bbb;
     }
 
@@ -714,7 +791,6 @@ NAV
     font-size: 15px;
     font-weight: 400;
     padding: 0 10px 0 13px;
-    text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
@@ -725,13 +801,18 @@ NAV
 
   /*Navbar*/
   .navbar-fixed-top .navbar-nav > li > a {
-    color: #555;
-    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+
+  .navbar-fixed-top .navbar-nav > li > a.btn-light{
+    padding: 6px 30px;
   }
 
   .navbar-fixed-top .navbar-nav .active > a,
   .navbar-fixed-top .navbar-nav li > a:hover {
-    color: #7c7ccf;
+    color: #fff;
   }
 
   /*Navbar Brand*/
@@ -749,26 +830,37 @@ NAV
   }
 }
 
-.flexberry-logo {
+.flexberry-logo, .flexberry-logo-slide, .partners-img{
     display: inline-block;
-    width: 110px;
-    height: 90px;
-    background-image: url('https://flexberry.github.io/site/img/logo-last.png');
-    background-position: 0 4.37px !important;
     background-repeat: no-repeat;
     z-index: 1000;
     text-decoration: none !important;
     float: left;
 }
 
+.flexberry-logo{  
+    width: 110px;
+    height: 90px;
+    background-image: url('https://flexberry.github.io/site/img/logo.png');
+    background-position: 0 4.37px !important;
+}
+
+.flexberry-logo-slide{
+    width: 150px;
+    height: 150px;
+    background-image: url('https://flexberry.github.io/site/img/logo-slide.png');
+    background-size: 100%;
+    float: none;
+}
+
+.partners-img{
+    height: 55px;
+}
+
 .navbar-brand {
   height: 90px;
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.nav.navbar-nav {
-  padding-top: 40px;
 }
 
 .nav.navbar-nav .dropdown-menu {
@@ -779,19 +871,19 @@ NAV
 Flexberry Slider
 ================================*/
 .flexberry-slider {
-  background-color: #7c7ccf;
-  height: 450px;
+  height: 730px;
   margin-bottom: 0px;
   padding-top: 90px;
   padding-bottom: 0px;
 }
 
 .flexberry-slider .flexberry-sheet, .page-header {
-  background-color: #7c7ccf;
-  background-image: url('https://flexberry.github.io/site/img/bg.png');
-  background-position: right center;
-  background-repeat: no-repeat;
   height: 100%;
+  position: relative;
+}
+
+.page-header h2{
+    margin-bottom: 0px;
 }
 
 .slides {
@@ -799,7 +891,7 @@ Flexberry Slider
 }
 
 #flexHome h1 {
-    color: #28284D;
+    color: #fff;
     background: none;
     margin-bottom: 9px;
     font-weight: 600;
@@ -807,7 +899,7 @@ Flexberry Slider
     text-transform: uppercase;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
-    text-align: left;
+    text-align: center;
     display: inline-block;
     padding: 0;
     padding-top: 10px;
@@ -816,18 +908,19 @@ Flexberry Slider
 #flexHome h2 {
     color: #fff;
     background: none;
-    text-align: left;
+    text-align: center;
     display: inline-block;
     font-weight: 300;
     line-height: 1;
+    width: 100%;
 }
 .flexslider .slides > li {
     height: 250px;
 }
 
 #flexHome .flex-control-nav {
-    text-align: left;
-    margin-bottom: -44px;
+    text-align: center;
+    /*margin-bottom: -44px;*/
 }
 
 .flexslider .flex-control-nav {
@@ -836,7 +929,7 @@ Flexberry Slider
 
 .flex-control-nav {
     position: static;
-    margin-top: 55px;
+    margin-top: 20px;
     margin-left: 0;
 }
 
@@ -931,11 +1024,26 @@ Flexberry Slider
 @media(min-width:1200px) {
     #flexHome h1,
     #TitlePaneBlock > h3 {
-        font-size: 60px;
+        font-size: 40px;
+    }
+
+    section:not(#partners) .row{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    #top-action-zone .container .nav-mini{
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+
+    #education .container, #education-scope .container{
+        padding-right: 80px;
+        padding-left: 80px;
     }
 
     #flexHome {
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
         #flexHome h2 {
@@ -943,14 +1051,154 @@ Flexberry Slider
         }
 }
 
-#products, #portfolio, #education-features, #more-info-features, #quality-features, .landing-items  {
-    background: #acacff;
-}
-
 .developer-guy {
     max-height: 400px;
 }
 
+.products-img {
+    max-height: 400px;
+    margin-bottom: 22px;
+}
+
 .page-title {
-      padding-top: 130px;
+      padding-top: 150px;
+}
+
+section h4{
+    color: #650f8b;
+}
+
+#education-scope h4{
+    font-size: 16px
+}
+.scope-item{
+    margin-bottom: 20px; 
+}
+section h3{
+    color: #333333;
+    font-size: 24px;
+    font-weight:700;
+    margin-bottom: 30px;
+
+}
+
+#content h3{
+    margin-top:70px;
+    margin-bottom: 15px;
+}
+
+#content p, #content ul{
+    font-size: 15px;
+}
+
+.items{
+    margin: 0 0 15px;
+}
+.items p{
+    color: #666666;
+    font-size: 15px; 
+}
+
+.simple-text p{
+
+}
+
+section .row{
+    /*padding-left: 80px;
+    padding-right: 80px;*/
+}
+
+
+.success {
+    color: #fff;
+      /*background: #870780;*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#93047b+0,4e1493+100 */
+    background: #93047b; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #93047b 0%, #4e1493 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #93047b 0%,#4e1493 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #93047b 0%,#4e1493 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93047b', endColorstr='#4e1493',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+#top-action-zone{
+    color: #fff;
+    background-image: url('https://flexberry.github.io/site/img/bg.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+#background {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  height: 200px;
+}
+
+.success-sta{
+    color: #fff;
+    background-image: url('https://flexberry.github.io/site/img/bgsta.png');
+    background-size: 100%;
+
+    padding-bottom: 130px; 
+}
+
+.button {
+  display: inline-block;
+  margin: 40px;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+
+  cursor: pointer;
+  border-radius: 50%;
+
+  box-shadow: 0 3px 20px rgba(0,0,0,.25),
+  inset 0 2px 0 rgba(255,255,255,.6),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);
+
+    background-position: 50% !important;
+    background-repeat: no-repeat;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+  0 2px 0 rgba(255,255,255,.4),
+  inset 0 2px 0 rgba(0,0,0,.1);
+}
+
+.btn-nav1{
+   background-image: url('https://flexberry.github.io/site/img/products/nav-1.png');
+
+}
+
+.btn-nav2{
+   background-image: url('https://flexberry.github.io/site/img/products/nav-2.png');
+}
+
+.btn-nav3{
+   background-image: url('https://flexberry.github.io/site/img/products/nav-3.png');
+}
+
+.btn-nav{
+    position: relative;
+}
+
+.btn-nav:hover{
+    color: #fff;
+}
+
+.btn-nav span{
+    position: absolute;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-mini{
+    bottom: -75px;
+    position: absolute;
 }

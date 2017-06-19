@@ -13,7 +13,8 @@ var cbpAnimatedHeader = (function() {
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-fixed-top' ),
 		didScroll = false,
-		changeHeaderOn = 300;
+		changeHeaderOn = 120,
+		pathname = document.location.pathname;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -22,15 +23,20 @@ var cbpAnimatedHeader = (function() {
 				setTimeout( scrollPage, 250 );
 			}
 		}, false );
+		if ( pathname.length > 4) {
+			classie.add( header, 'success' );
+		}
 	}
 
 	function scrollPage() {
 		var sy = scrollY();
-		if ( sy >= changeHeaderOn ) {
+		if ( sy >= changeHeaderOn || pathname.length > 4) {
 			classie.add( header, 'navbar-shrink' );
+			classie.add( header, 'success' );
 		}
 		else {
 			classie.remove( header, 'navbar-shrink' );
+			classie.remove( header, 'success' );
 		}
 		didScroll = false;
 	}
