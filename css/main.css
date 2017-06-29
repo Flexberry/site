@@ -24,16 +24,26 @@ p.small {
 }
 
 a,
+a:visited,
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #28284D;
+    color: #650f8b;
     text-decoration: none;
 }
 
-
+.success-sta a,
+.success-sta a:visited,
+.success-sta a:hover,
+.success-sta a:focus,
+.success-sta a:active,
+.success-sta a.active {
+    outline: 0;
+    color: #fff;
+    text-decoration: none;
+}
 
 h1,
 h2,
@@ -159,6 +169,10 @@ header .intro-text .skills {
     header .intro-text .skills {
         font-size: 1.75em;
     }
+
+    .modal-dialog {
+        width: 350px;        
+    }
 }
 
 @media(min-width:768px) {
@@ -177,7 +191,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+        padding: 0 0;
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
@@ -222,7 +236,9 @@ header .intro-text .skills {
 section {
     padding: 40px 0;
 }
-
+#content, #platform-features-text{
+    padding-top: 0px; 
+}
 section h2 {
     margin: 0;
     font-size: 2.3em;
@@ -230,26 +246,33 @@ section h2 {
     padding-top: 70px;
 }
 
+section.page-header h2{
+    padding-top: 0px;
+}
+
+
 .flexslider h2{
     padding-top: 10px;
 }
 
-@media(max-width:767px) {
-    section {
-        padding: 75px 0;
-    }
-
-    section.first {
-        padding-top: 75px;
-    }
+.menu-pointer{
+    background-image: url('https://flexberry.github.io/site/img/menu-pointer.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 22px;
+    width: 130px;
+    position: relative;
+    bottom: -11px;
+    margin: auto;
+    display: none;
 }
 
 .portfolio-item {
     right: 0;
     margin: 0 0 15px;
     min-height: 230px;
-    padding-left: 30px;
-    padding-right: 20px;
+    padding-left: 0 40px;
 }
 
 .education-item{
@@ -260,7 +283,6 @@ section h2 {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
 }
 
 
@@ -269,7 +291,12 @@ text-decoration: none;
 border-bottom: 1px solid rgba(101, 15, 139, 0.3);
 }
 
-a span.item-head:hover{
+span.item-link{
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+a span.item-head:hover, a span.item-link:hover{
   border-bottom:none;  
 }
 
@@ -318,6 +345,43 @@ a span.item-head:hover{
     }
 }
 
+@media(max-width:767px) {
+    section {
+        padding: 75px 0;
+    }
+
+    section.first {
+        padding-top: 75px;
+    }
+
+    .mega-menu .nav,
+    .mega-menu .dropup,
+    .mega-menu .dropdown,
+    .mega-menu .collapse {
+        background-color: #fff;
+    }
+
+    .portfolio-item {
+        padding-bottom: 10px;
+        min-height: 0;
+    }
+    
+    .solutions-link img{
+        margin-right: 20px;
+    }
+}
+
+@media(max-width:991px) {
+    .menu-pointer {
+        bottom: -54px;
+    }
+
+    .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+        margin-left: -80px;
+        top: 40%;
+    }
+}
+
 .btn-md, .btn-lg{
     border-radius: 50px;
 }
@@ -328,6 +392,7 @@ a span.item-head:hover{
 .btn-lg{    
     padding: 15px 60px;
     margin-bottom: 40px;
+    font-size: 20px;
 }
 
 .btn-outline {
@@ -339,10 +404,10 @@ a span.item-head:hover{
 }
 
 .btn-light{
-     border: 1px solid; /* стили рамки */
-    -moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
-    -webkit-border-radius: 10px; /* закругление для старых Chrome и Safari */
-    -khtml-border-radius:10px; /* закругл. для браузера Konquerer системы Linux */
+     border: 1px solid; 
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius:10px;
     border-radius: 50px;
 }
 
@@ -431,8 +496,14 @@ form .row:first-child .floating-label-form-group {
     border-top: 1px solid #eee;
 }
 
+/*footer*/
 footer {
     color: #fff;
+    background-image: url('https://flexberry.github.io/site/img/footer-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 130px;
+    font-size: 14px;
 }
 
 footer h3 {
@@ -450,7 +521,29 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #233140;
+    color: #b3b3b3;
+}
+
+footer .footer-above ul {
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+footer h4{
+    font-size: 16px;
+}
+
+footer h5{
+    color: #666;
+}
+
+
+footer hr{
+    border: none;
+    color: rgba(152, 154, 152, 0.32);
+    background-color: rgba(152, 154, 152, 0.32);
+    height: 1px;
+    width: 20%;
 }
 
 .btn-social {
@@ -586,6 +679,10 @@ background: none;
     position: relative;
 }
 
+.navbar-default .navbar-toggle {
+    background: #fff;
+}
+
 .mega-menu .dropdown-menu {
     left: auto;
 }
@@ -624,17 +721,16 @@ background: none;
 }
 
 .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
-    left: 0;
-    right: 0;
     overflow: hidden;
     border-radius: 5px;
-    top:inherit;
+    top:60%;
 }
 
 @media (min-width: 992px) {
   .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
-      margin-left: 10px;
+    left: 20%;
   }
+
   .dropdown-menu {
     border: none;
     padding: 15px 0;
@@ -644,10 +740,12 @@ background: none;
     z-index: 9999 !important;
   }
   .dropdown-menu li a {
-    color: #777;
     font-size: 13px;
     font-weight: 400;
     padding: 6px 25px;
+  }
+.dropdown-menu li a:hover {
+    color: #650f8b;
   }
 }
 
@@ -657,16 +755,25 @@ background: none;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-
+      
       /*-webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;*/
+  }
+
+  .mega-menu .row.equal-height {
+    margin: 0px;
+  }
+
+  .mega-menu .equal-height-in ul {
+    margin-left: 0px;
   }
 
   .mega-menu .equal-height-in {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      width: inherit;
   }
 }
 
@@ -688,7 +795,6 @@ background: none;
 @media (min-width: 992px) {
     .mega-menu .equal-height-in {
         padding: 20px;
-        border-left: 1px solid #bbb;
     }
 
     .mega-menu .equal-height-in:first-child {
@@ -756,7 +862,6 @@ background: none;
 
   /*Equal Height List Style*/
   .mega-menu .equal-height-list h3 {
-    color: #555;
     margin: 0 0 5px;
     font-size: 13px;
     font-weight: 400;
@@ -764,7 +869,6 @@ background: none;
   }
 
   .mega-menu .equal-height-list li a {
-    color: #777;
     display: block;
     font-size: 13px;
     font-weight: 400;
@@ -800,19 +904,9 @@ background: none;
   }
 
   /*Navbar*/
-  .navbar-fixed-top .navbar-nav > li > a {
-    color: rgba(255, 255, 255, 0.8);
-    padding-bottom: 7px;
-    padding-top: 7px;
-  }
 
   .navbar-fixed-top .navbar-nav > li > a.btn-light{
     padding: 6px 30px;
-  }
-
-  .navbar-fixed-top .navbar-nav .active > a,
-  .navbar-fixed-top .navbar-nav li > a:hover {
-    color: #fff;
   }
 
   /*Navbar Brand*/
@@ -830,7 +924,7 @@ background: none;
   }
 }
 
-.flexberry-logo, .flexberry-logo-slide, .partners-img{
+.flexberry-logo, .flexberry-logo-slide, .flexberry-logo-color{
     display: inline-block;
     background-repeat: no-repeat;
     z-index: 1000;
@@ -845,16 +939,29 @@ background: none;
     background-position: 0 4.37px !important;
 }
 
+.flexberry-logo-color {
+    width: 60px;
+    height: 60px;
+    background-image: url(http://localhost:4000/img/logo-color.png);
+    background-size: 100%;
+    margin-top: -80px;
+    left: calc(50% - 30px);
+    position: absolute;
+}
 .flexberry-logo-slide{
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     background-image: url('https://flexberry.github.io/site/img/logo-slide.png');
     background-size: 100%;
     float: none;
 }
 
 .partners-img{
-    height: 55px;
+    max-height: 55px;
+}
+
+.slick-slide img.partners-img {
+    margin: auto;
 }
 
 .navbar-brand {
@@ -863,15 +970,11 @@ background: none;
   padding-bottom: 0;
 }
 
-.nav.navbar-nav .dropdown-menu {
-  min-height: 360px;
-}
-
 /*================================
 Flexberry Slider
 ================================*/
 .flexberry-slider {
-  height: 730px;
+  height: 850px;
   margin-bottom: 0px;
   padding-top: 90px;
   padding-bottom: 0px;
@@ -880,6 +983,11 @@ Flexberry Slider
 .flexberry-slider .flexberry-sheet, .page-header {
   height: 100%;
   position: relative;
+}
+
+.page-header {
+  height: 100%;
+  border-bottom: none;
 }
 
 .page-header h2{
@@ -1000,6 +1108,30 @@ Flexberry Slider
     #homeFullScreen .flexslider .slides > li {
         height: 80px;
     }
+
+    .navbar-fixed-top .navbar-nav > li > a {
+        color: rgba(255, 255, 255, 0.8);
+        padding-bottom: 7px;
+        padding-top: 7px;
+    }
+
+    .navbar-fixed-top .navbar-nav .active > a,
+    .navbar-fixed-top .navbar-nav li > a:hover,
+    .navbar-fixed-top .navbar-nav li > a:focus {
+        color: #fff;
+    }
+
+    .navbar-fixed-top .navbar-nav .dropdown-menu .active > a,
+    .navbar-fixed-top .navbar-nav .dropdown-menu li > a:hover,
+    .navbar-fixed-top .navbar-nav .dropdown-menu li > a:focus {
+        color: #650f8b;
+        text-decoration: underline rgba(101, 15, 139, 0.3); 
+    }
+
+    .dropdown-menu {
+        padding: 15px;
+        border: none;
+    }
 }
 
 @media(min-width:992px) {
@@ -1027,28 +1159,71 @@ Flexberry Slider
         font-size: 40px;
     }
 
-    section:not(#partners) .row{
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
     #top-action-zone .container .nav-mini{
-        padding-left: 180px;
-        padding-right: 180px;
+        padding: 0px 180px;
     }
 
-    #education .container, #education-scope .container{
-        padding-right: 80px;
-        padding-left: 80px;
+    #education .container, #education-scope .container, #business .container{
+        padding-right: 130px;
+        padding-left: 130px;
     }
 
     #flexHome {
         margin-top: 30px;
     }
 
-        #flexHome h2 {
-            font-size: 26px;
-        }
+    #flexHome h2 {
+        font-size: 26px;
+    }
+
+}
+
+.solutions-link img{
+    box-shadow: 0px 8px 20px 4px rgba(136, 135, 135, 0.51);
+    height: 126px;
+    width: 220px;
+}
+
+/* Cтили для перекрывающих элементов */
+.solutions-link {
+  display: inline-block;
+  position: relative;
+  height: 130px;
+}
+
+.cover-bg,
+.cover-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.solutions-link:hover .cover-bg,
+.solutions-link:hover .cover-icon{
+  display: block;
+}
+
+
+.cover-bg {
+    background: #93047b;
+    background: -moz-linear-gradient(-45deg, #93047b 0%, #4e1493 100%); 
+    background: -webkit-linear-gradient(-45deg, #93047b 0%,#4e1493 100%); 
+    background: linear-gradient(135deg, #93047b 0%,#4e1493 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93047b', endColorstr='#4e1493',GradientType=1 ); 
+
+  -khtml-opacity: .9;
+    -moz-opacity: .9;
+         opacity: .9;
+}
+
+.cover-icon {
+    background-image: url('https://flexberry.github.io/site/img/sol-arrow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
 .developer-guy {
@@ -1065,7 +1240,22 @@ Flexberry Slider
 }
 
 section h4{
+    font-weight: bold;
+}
+
+section h4, footer h4, .features h3{
     color: #650f8b;
+    text-align: left;
+}
+
+.features h4{
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.features ul{
+    margin-left: 0px 
 }
 
 #education-scope h4{
@@ -1074,7 +1264,7 @@ section h4{
 .scope-item{
     margin-bottom: 20px; 
 }
-section h3{
+section h3, #login-modal h3{
     color: #333333;
     font-size: 24px;
     font-weight:700;
@@ -1087,8 +1277,8 @@ section h3{
     margin-bottom: 15px;
 }
 
-#content p, #content ul{
-    font-size: 15px;
+.simple-text p, #content ul{
+
 }
 
 .items{
@@ -1109,10 +1299,10 @@ section .row{
 }
 
 
-.success {
-    color: #fff;
+.success{
+
       /*background: #870780;*/
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#93047b+0,4e1493+100 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#93047b+0,4e1493+100 */
     background: #93047b; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #93047b 0%, #4e1493 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #93047b 0%,#4e1493 100%); /* Chrome10-25,Safari5.1-6 */
@@ -1124,7 +1314,7 @@ section .row{
 #top-action-zone{
     color: #fff;
     background-image: url('https://flexberry.github.io/site/img/bg.png');
-    background-position: center bottom;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -1141,9 +1331,10 @@ section .row{
 .success-sta{
     color: #fff;
     background-image: url('https://flexberry.github.io/site/img/bgsta.png');
-    background-size: 100%;
-
-    padding-bottom: 130px; 
+    background-size: 100% 100%;
+    padding-bottom: 130px;
+    background-repeat: no-repeat;
+    background-position: 0 0, 0 bottom;
 }
 
 .button {
@@ -1201,4 +1392,57 @@ section .row{
 .nav-mini{
     bottom: -75px;
     position: absolute;
+}
+
+.slick-slide {
+    padding: 20px;
+}
+
+.multiple-items-solutions .slick-slide {
+    padding: 8px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #9d9d9d;
+}
+
+/*Modal*/
+.modal-header, .modal-body, .modal-footer {
+    border: none;
+    padding: 20px 40px 10px;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+#login-modal h3{
+    margin-bottom: 0px;
+}
+
+#login-modal .form-control {
+    height: 50px;
+}
+
+#login-modal a{
+    width: 100%;
+    margin-top: 0;
+}
+
+button.close {
+    padding: 10px;
+}
+
+.close {
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 0.5; 
+}
+
+#login-modal label {
+    font-weight: 100;
+}
+
+.big-container{
+    padding: 0 40px;
 }

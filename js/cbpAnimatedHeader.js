@@ -23,14 +23,11 @@ var cbpAnimatedHeader = (function() {
 				setTimeout( scrollPage, 250 );
 			}
 		}, false );
-		if ( pathname.length > 4) {
-			classie.add( header, 'success' );
-		}
 	}
 
 	function scrollPage() {
 		var sy = scrollY();
-		if ( sy >= changeHeaderOn || pathname.length > 4) {
+		if ( sy >= changeHeaderOn) {
 			classie.add( header, 'navbar-shrink' );
 			classie.add( header, 'success' );
 		}
@@ -45,6 +42,11 @@ var cbpAnimatedHeader = (function() {
 		return window.pageYOffset || docElem.scrollTop;
 	}
 
-	init();
-
+	if ( pathname.length > 4) {
+		classie.add( header, 'success' );
+		classie.add( header, 'navbar-shrink' );
+	}
+	else{
+		init();
+	}
 })();
