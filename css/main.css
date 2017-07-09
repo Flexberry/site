@@ -23,14 +23,17 @@ p.small {
     font-size: 16px;
 }
 
-a,
+a{
+    color: rgba(94, 16, 141, 0.8);
+}
+
 a:visited,
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #650f8b;
+    color: #5a0d80;
     text-decoration: none;
 }
 
@@ -43,6 +46,15 @@ a.active {
     outline: 0;
     color: #fff;
     text-decoration: none;
+}
+
+a.btn-fill,
+a.btn-fill:visited,
+a.btn-fill:hover,
+a.btn-fill:focus,
+a.btn-fill:active,
+a.btn-fill.active {
+    color: #fff;
 }
 
 h1,
@@ -180,6 +192,7 @@ header .intro-text .skills {
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
+        -ms-transition: padding .3s;
         transition: padding .3s;
     }
 
@@ -187,6 +200,7 @@ header .intro-text .skills {
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
+        -ms-transition: all .3s;
         transition: all .3s;
     }
 
@@ -308,6 +322,7 @@ a span.item-head:hover, a span.item-link:hover{
     background: rgba("24,288,156",.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
     transition: all ease .5s;
 }
 
@@ -339,49 +354,6 @@ a span.item-head:hover, a span.item-link:hover{
     z-index: 2;
 }
 
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
-}
-
-@media(max-width:767px) {
-    section {
-        padding: 75px 0;
-    }
-
-    section.first {
-        padding-top: 75px;
-    }
-
-    .mega-menu .nav,
-    .mega-menu .dropup,
-    .mega-menu .dropdown,
-    .mega-menu .collapse {
-        background-color: #fff;
-    }
-
-    .portfolio-item {
-        padding-bottom: 10px;
-        min-height: 0;
-    }
-    
-    .solutions-link img{
-        margin-right: 20px;
-    }
-}
-
-@media(max-width:991px) {
-    .menu-pointer {
-        bottom: -54px;
-    }
-
-    .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
-        margin-left: -80px;
-        top: 40%;
-    }
-}
-
 .btn-md, .btn-lg{
     border-radius: 50px;
 }
@@ -400,6 +372,9 @@ a span.item-head:hover, a span.item-link:hover{
     border: solid 1px rgba(101, 15, 139, 0.3);    
     color: #650f8b;
     background: 0 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -416,6 +391,9 @@ a span.item-head:hover, a span.item-link:hover{
     border: solid 1px rgba(101, 15, 139, 0.3);
     color: #fff;
     background: #10c0de;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -426,9 +404,9 @@ a span.item-head:hover, a span.item-link:hover{
     color: #fff;
     background: #10c0de;
     border: solid 1px rgba(101, 15, 139, 0.3);
-    -webkit-box-shadow: 0px 15px 30px #555;
-    -moz-box-shadow: 0px 5px 30px #555;
-    box-shadow: 0px 5px 30px #555;
+    -webkit-box-shadow: 0px 5px 30px rgba(51, 51, 51, 0.75);
+    -moz-box-shadow: 0px 5px 30px rgba(51, 51, 51, 0.75);
+    box-shadow: 0px 5px 30px rgba(51, 51, 51, 0.75);
 }
 
 .btn-outline:hover,
@@ -550,8 +528,6 @@ footer hr{
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
-    border-radius: 100%;
     text-align: center;
     font-size: 20px;
     line-height: 45px;
@@ -942,12 +918,13 @@ background: none;
 .flexberry-logo-color {
     width: 60px;
     height: 60px;
-    background-image: url(http://localhost:4000/img/logo-color.png);
+    background-image: url('https://flexberry.github.io/site/img/logo-color.png');
     background-size: 100%;
     margin-top: -80px;
     left: calc(50% - 30px);
     position: absolute;
 }
+
 .flexberry-logo-slide{
     width: 180px;
     height: 180px;
@@ -1113,6 +1090,10 @@ Flexberry Slider
         color: rgba(255, 255, 255, 0.8);
         padding-bottom: 7px;
         padding-top: 7px;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
     .navbar-fixed-top .navbar-nav .active > a,
@@ -1178,45 +1159,44 @@ Flexberry Slider
 
 }
 
+/*
+/ Portfolio
+*/
+
 .solutions-link img{
-    box-shadow: 0px 8px 20px 4px rgba(136, 135, 135, 0.51);
-    height: 126px;
-    width: 220px;
+    height: 100%;
+    box-shadow: 0px 8px 13px 0px rgba(136, 135, 135, 0.45);
 }
 
-/* Cтили для перекрывающих элементов */
 .solutions-link {
   display: inline-block;
   position: relative;
   height: 130px;
+      
+  -webkit-backface-visibility: hidden;
 }
 
-.cover-bg,
-.cover-icon {
-  display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.solutions-link:after,
+.cover-icon{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out;
+    -ms-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
 }
 
-.solutions-link:hover .cover-bg,
-.solutions-link:hover .cover-icon{
-  display: block;
-}
-
-
-.cover-bg {
+.solutions-link:after{
     background: #93047b;
     background: -moz-linear-gradient(-45deg, #93047b 0%, #4e1493 100%); 
     background: -webkit-linear-gradient(-45deg, #93047b 0%,#4e1493 100%); 
     background: linear-gradient(135deg, #93047b 0%,#4e1493 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93047b', endColorstr='#4e1493',GradientType=1 ); 
-
-  -khtml-opacity: .9;
-    -moz-opacity: .9;
-         opacity: .9;
 }
 
 .cover-icon {
@@ -1224,6 +1204,18 @@ Flexberry Slider
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+    z-index: 2;
+}
+
+.solutions-link:hover:after,
+.solutions-link:hover .cover-icon{
+    visibility: visible;
+    -khtml-opacity: .9;
+    -moz-opacity: .9;
+    opacity: .9;
+}
+.solutions-link:hover{
+    box-shadow: none;
 }
 
 .developer-guy {
@@ -1245,7 +1237,16 @@ section h4{
 
 section h4, footer h4, .features h3{
     color: #650f8b;
+}
+
+footer h4, .features h3{
+    color: rgba(84, 16, 125, 0.86);
     text-align: left;
+}
+
+footer h4:hover, 
+.features h3:hover{
+    color: rgba(84, 16, 125, 1);
 }
 
 .features h4{
@@ -1337,26 +1338,22 @@ section .row{
     background-position: 0 0, 0 bottom;
 }
 
-.button {
-  display: inline-block;
-  margin: 40px;
-  width: 120px;
-  height: 120px;
-  background: #fff;
+.btn-nav-mini {
+    display: inline-block;
+    margin: 40px;
+    width: 120px;
+    height: 120px;
+    background: #fff;
 
-  cursor: pointer;
-  border-radius: 50%;
+    cursor: pointer;
+    border-radius: 50%;
 
-  box-shadow: 0 3px 20px rgba(0,0,0,.25),
-  inset 0 2px 0 rgba(255,255,255,.6),
-  0 2px 0 rgba(0,0,0,.1),
-  inset 0 0 20px rgba(0,0,0,.1);
-
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     background-position: 50% !important;
     background-repeat: no-repeat;
 }
 
-.button:hover {
+.btn-nav-mini:hover {
   box-shadow: inset 0 0 20px rgba(0,0,0,.2),
   0 2px 0 rgba(255,255,255,.4),
   inset 0 2px 0 rgba(0,0,0,.1);
@@ -1392,6 +1389,7 @@ section .row{
 .nav-mini{
     bottom: -75px;
     position: absolute;
+    width: 93%;
 }
 
 .slick-slide {
@@ -1402,8 +1400,23 @@ section .row{
     padding: 8px;
 }
 
-.slick-prev:before, .slick-next:before {
-    color: #9d9d9d;
+.prevArrow, .nextArrow {
+    color: rgba(101, 15, 139, 0.3);
+    top:30%;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.prevArrow{
+    left: -25px;
+}
+
+.nextArrow{
+    right: -25px;
 }
 
 /*Modal*/
@@ -1445,4 +1458,72 @@ button.close {
 
 .big-container{
     padding: 0 40px;
+}
+
+@media(min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
+@media(max-width:767px) {
+    section {
+        padding: 75px 0;
+    }
+
+    section.first {
+        padding-top: 75px;
+    }
+
+    .mega-menu .nav,
+    .mega-menu .dropup,
+    .mega-menu .dropdown,
+    .mega-menu .collapse {
+        background-color: #fff;
+    }
+
+    .portfolio-item {
+        padding-bottom: 10px;
+        min-height: 0;
+    }
+    
+    .solutions-link img{
+        margin-right: 20px;
+    }
+
+    .btn-nav-mini{
+        margin: 50px 0;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .solutions-link{
+        height: 80px;
+    }
+
+    .slick-slider{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .success-sta{
+        background-size: 130% 100%;
+        background-position: 0 0, 0 bottom;
+    }
+
+    #top-action-zone {
+        background-size: 130% 100%;
+        background-position: 0 0, 0 bottom;
+    }
+}
+
+@media(max-width:991px) {
+    .menu-pointer {
+        bottom: -54px;
+    }
+
+    .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+        margin-left: -80px;
+        top: 40%;
+    }
 }
