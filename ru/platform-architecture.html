@@ -201,7 +201,7 @@
                   <ul class="list-unstyled equal-height-list">
                     <li><h3>Мероприятия</h3></li>
                     <li><a href="/site/ru/education-courses.html">Учебные курсы</a></li>
-                    <li><a href="/site/ru/list-of-certified-specialists.html">Cписок сертифицированных специалистов</a></li>
+                    <!-- <li><a href="/site/ru/list-of-certified-specialists.html">Cписок сертифицированных специалистов</a></li> -->
                     <li><a href="/site/ru/education-internship.html">Стажировка</a></li>
                     <li><a type="button" href="https://flexberry-designer-web.azurewebsites.net/#/fd-request-course/new" class="btn btn-md btn-outline">Записаться на курс</a></li>
                   </ul>
@@ -612,16 +612,16 @@
       <div class="col-lg-10 col-lg-offset-1 simple-text">
         <p>Архитектура создаваемых на платформе приложений обычно включает в себя следующие элементы:</p>
         <ul>
-          <li>Хранилище (<a href="https://www.postgresql.org/" target="_blank">Postgres</a> / <a href="https://www.microsoft.com/ru-ru/sql-server/sql-server-2017-editions" target="_blank">MSSQL</a> / <a href="https://www.oracle.com/ru/" target="_blank">Oracle</a> / <a href="https://www.mongodb.com/" target="_blank">MongoDb</a> / …)</li>
-          <li>Серверная часть (<a href="https://www.microsoft.com/net" target="_blank">.NET</a> / <a href="https://www.mono-project.com/" target="_blank">Mono</a> / …)</li>
-          <li>Протокол обмена данными (<a href="https://www.odata.org/" target="_blank">OData</a> / …)</li>
+          <li>Хранилище (<a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> / <a href="https://www.microsoft.com/ru-ru/sql-server/sql-server-2017-editions" target="_blank">Microsoft SQL Server</a> / <a href="https://www.oracle.com/ru/" target="_blank">Oracle DB</a> / <a href="https://www.mongodb.com/" target="_blank">MongoDb</a> / …)</li>
+          <li>Серверная часть (<a href="https://www.microsoft.com/net" target="_blank">Microsoft .NET</a> / <a href="https://www.mono-project.com/" target="_blank">Mono</a> / …)</li>
+          <li>Протокол обмена данными (<a href="https://www.odata.org/" target="_blank">OData v4</a> / …)</li>
           <li>Клиентская часть (<a href="https://www.emberjs.com/" target="_blank">EmberJS</a> / …)</li>
           <li>Функциональные подсистемы</li>
         </ul>
         <img src="/site/img/platform/architect/application-architecture.PNG" class="img-centered">
-        <p>Почему .NET / Mono?</p>
+        <p>Почему Microsoft .NET / Mono?</p>
         <ul>
-          <li><a href="https://www.microsoft.com/net" target="_blank">Microsoft .NET</a> и <a href="https://www.mono-project.com/" target="_blank">Mono</a> – это честный OpenSource, язык программирования <a href="https://ru.wikipedia.org/wiki/C_Sharp" target="_blank">C#</a> – это стандарт ECMA, ISO</li>
+          <li><a href="https://www.microsoft.com/net" target="_blank">Microsoft .NET</a> и <a href="https://www.mono-project.com/" target="_blank">Mono</a> &ndash; это честный OpenSource, язык программирования <a href="https://ru.wikipedia.org/wiki/C_Sharp" target="_blank">C#</a> &ndash; это стандарт ECMA, ISO</li>
           <li>Кроссплатформенность</li>
           <li>Популярный язык, развитая экосистема</li>
         </ul>
@@ -632,14 +632,14 @@
         <ul>
           <li>Протокол обмена данными между клиентом и сервером, наиболее полно описывающий как структуру данных, так и настройку выборки</li>
           <li>Используется в качестве протокола в продуктах SAP, 1C</li>
-          <li>OData, в отличие от GraphQL изначально задумывался как протокол для Enterprise-приложений</li>
+          <li>OData, в отличие от GraphQL, изначально задумывался в качестве протокола для Enterprise-приложений</li>
         </ul>
         <p><br>
         </p>
         <p>Почему EmberJS?</p>
         <ul>
           <li>Предназначен для сложных многофункциональных веб-приложений</li>
-          <li>Наиболее популярный OpenSource фреймворк, за которым не стоит одна корпорация</li>
+          <li>Наиболее популярный OpenSource фреймворк, за которым не стоит ни одна корпорация</li>
           <li>Есть полный MVC «из коробки» в отличие от React или Vue</li>
         </ul>
         <p><br>
@@ -649,21 +649,24 @@
           <li>Системное ПО<br>
           <ul>
             <li>ОС
-            <ul>
-              <li>Windows</li>
-              <li>Linux</li>
-            </ul></li>
+              <ul>
+                <li>Microsoft Windows</li>
+                <li>Linux</li>
+              </ul>
+            </li>
           </ul>
           <ul>
             <li>БД
-            <ul>
-              <li>MS SQL&nbsp;</li>
-              <li>Postgres</li>
-              <li>Oracle</li>
-              <li>MongoDB</li>
-              <li>…</li>
-            </ul></li>
-          </ul></li>
+              <ul>
+                <li>Microsoft SQL Server</li>
+                <li>Postgre SQL</li>
+                <li>Oracle DB</li>
+                <li>MongoDB</li>
+                <li>…</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
           <li>Клиентское ПО<br>
           <ul>
             <li>Современный браузер</li>
@@ -717,7 +720,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><a href="/site/ru/developers-flexberry-foundation.html">Flexberry Foundation</a> - Подсистема ввода и поиска информации (учёт данных)</td>
+              <td><a href="/site/ru/developers-flexberry-foundation.html">Flexberry Foundation</a> &ndash; подсистема ввода и поиска информации (учёт данных)</td>
               <td>
                 <ul>
                   <li>Хранилище данных (PostgreSQL, Microsoft SQL Server, Oracle, MongoDB, и др.)</li>
@@ -727,7 +730,7 @@
               </td>
             </tr>
             <tr>
-              <td><a href="/site/ru/developers-flexberry-gis.html">Flexberry GIS</a> - Геоинформационная подсистема</td>
+              <td><a href="/site/ru/developers-flexberry-gis.html">Flexberry GIS</a> &ndash; геоинформационная подсистема</td>
               <td>
                 <ul>
                   <li>Хранилище данных карты (PostgreSQL, Microsoft SQL Server)</li>
@@ -739,7 +742,7 @@
               </td>
             </tr>
             <tr>
-              <td><a href="/site/ru/developers-flexberry-servicebus.html">Flexberry Service Bus</a> - Сервисная шина предприятия</td>
+              <td><a href="/site/ru/developers-flexberry-servicebus.html">Flexberry Service Bus</a> &ndash; сервисная шина предприятия</td>
               <td>
                 <ul>
                   <li>Сервис приёма и передачи сообщений</li>
@@ -748,7 +751,7 @@
               </td>
             </tr>
             <tr>
-              <td><a href="/site/ru/developers-flexberry-analytics.html">Flexberry Analytics</a> - Отчётность и бизнес-аналитика</td>
+              <td><a href="/site/ru/developers-flexberry-analytics.html">Flexberry Analytics</a> &ndash; отчётность и бизнес-аналитика</td>
               <td>
                 <ul>
                   <li>Сервер отчётности на основе Pentaho</li>
@@ -758,7 +761,7 @@
               </td>
             </tr>
             <tr>
-              <td><a href="/site/ru/developers-flexberry-bpm.html">Flexberry BPM</a> - Процессный подход</td>
+              <td><a href="/site/ru/developers-flexberry-bpm.html">Flexberry BPM</a> &ndash; процессный подход</td>
               <td>
                 <ul>
                   <li>Система исполнения BPM-процессов на основе jBPM</li>
@@ -768,7 +771,7 @@
               </td>
             </tr>
             <tr>
-              <td><a href="/site/ru/developers-flexberry-portal.html">Flexberry Portal</a> - Корпоративный портал</td>
+              <td><a href="/site/ru/developers-flexberry-portal.html">Flexberry Portal</a> &ndash; корпоративный портал</td>
               <td>
                 <ul>
                   <li>Корпоративный портал на основе Alfresco</li>
@@ -878,7 +881,7 @@
         
           
           <div class="col-sm-6 col-md-4 portfolio-item">
-              <a href="platform-development-process.html" class="portfolio-link">
+              <a href="platform-blog.html" class="portfolio-link">
                   <h4><span class="item-head">Блог</span></h4>
               </a>
               <p>Будьте в курсе новостей платформы Flexberry. Свежие релизы, анонсы и мероприятия – всё для наших уважаемых пользователей.</p>
