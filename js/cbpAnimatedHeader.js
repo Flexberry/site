@@ -42,11 +42,16 @@ var cbpAnimatedHeader = (function() {
 		return window.pageYOffset || docElem.scrollTop;
 	}
 
-	if ( pathname.length > 4) {
-		classie.add( header, 'success' );
-		classie.add( header, 'navbar-shrink' );
+	if (( pathname == "/ru/")
+	||(pathname == "/ru/platform-features.html")
+	||(pathname == "/ru/platform-architecture.html")
+	||(pathname == "/ru/platform-development-process.html")
+	||(pathname == "/ru/platform-roadmap.html")) {
+		init();
+
 	}
 	else{
-		init();
+		classie.add( header, 'success' );
+		classie.add( header, 'navbar-shrink' );
 	}
 })();
