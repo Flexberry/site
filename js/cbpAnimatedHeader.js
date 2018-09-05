@@ -10,48 +10,46 @@
  */
 var cbpAnimatedHeader = (function() {
 
-	var docElem = document.documentElement,
-		header = document.querySelector( '.navbar-fixed-top' ),
-		didScroll = false,
-		changeHeaderOn = 120,
-		pathname = document.location.pathname;
+  var docElem = document.documentElement,
+    header = document.querySelector( '.navbar-fixed-top' ),
+    didScroll = false,
+    changeHeaderOn = 80,
+    pathname = document.location.pathname;
 
-	function init() {
-		window.addEventListener( 'scroll', function( event ) {
-			if( !didScroll ) {
-				didScroll = true;
-				setTimeout( scrollPage, 250 );
-			}
-		}, false );
-	}
+  function init() {
+    window.addEventListener( 'scroll', function( event ) {
+      if( !didScroll ) {
+        didScroll = true;
+        setTimeout( scrollPage, 250 );
+      }
+    }, false );
+  }
 
-	function scrollPage() {
-		var sy = scrollY();
-		if ( sy >= changeHeaderOn) {
-			classie.add( header, 'navbar-shrink' );
-			classie.add( header, 'success' );
-		}
-		else {
-			classie.remove( header, 'navbar-shrink' );
-			classie.remove( header, 'success' );
-		}
-		didScroll = false;
-	}
+  function scrollPage() {
+    var sy = scrollY();
+    if ( sy >= changeHeaderOn) {
+      classie.add( header, 'navbar-shrink' );
+      classie.add( header, 'success' );
+    } else {
+      classie.remove( header, 'navbar-shrink' );
+      classie.remove( header, 'success' );
+    }
+    didScroll = false;
+  }
 
-	function scrollY() {
-		return window.pageYOffset || docElem.scrollTop;
-	}
+  function scrollY() {
+    return window.pageYOffset || docElem.scrollTop;
+  }
 
-	if (( pathname == "/ru/")
-	||(pathname == "/ru/platform-features.html")
-	||(pathname == "/ru/platform-architecture.html")
-	||(pathname == "/ru/platform-development-process.html")
-	||(pathname == "/ru/platform-roadmap.html")) {
-		init();
+  if (( pathname.substr(pathname.length - 4) == "/ru/")
+    ||(pathname.includes("/ru/platform-features.html"))
+    ||(pathname.includes("/ru/platform-architecture.html"))
+    ||(pathname.includes("/ru/platform-development-process.html"))
+    ||(pathname.includes("/ru/platform-roadmap.html"))) {
+      init();
 
-	}
-	else{
-		classie.add( header, 'success' );
-		classie.add( header, 'navbar-shrink' );
-	}
+  } else {
+    classie.add( header, 'success' );
+    classie.add( header, 'navbar-shrink' );
+  }
 })();

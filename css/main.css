@@ -9,6 +9,51 @@
     src: url('https://flexberry.github.io/site/css/fonts/HelveticaLight/HelveticaLight.ttf'); /* Путь к файлу со шрифтом */ 
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Thin), url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.eot');
+  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.eot#iefix') format("embedded-opentype"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.woff2') format("woff2"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.woff') format("woff"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.ttf') format("truetype");
+  font-weight: 200; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Light), url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.eot');
+  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.eot#iefix') format("embedded-opentype"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.woff2') format("woff2"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.woff') format("woff"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.ttf') format("truetype");
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Regular), url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.eot');
+  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.eot#iefix') format("embedded-opentype"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.woff2') format("woff2"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.woff') format("woff"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.ttf') format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.eot');
+  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.eot#iefix') format("embedded-opentype"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.woff2') format("woff2"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.woff') format("woff"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.ttf') format("truetype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.eot');
+  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.eot#iefix') format("embedded-opentype"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.woff2') format("woff2"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.woff') format("woff"), 
+  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.ttf') format("truetype");
+  font-weight: 600; }
+
 body {
     overflow-x: hidden;
     color: #333333;
@@ -169,7 +214,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Roboto,HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -180,7 +225,7 @@ header .intro-text .skills {
 }
 
 .navbar {
-    font-family: HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Roboto,HelveticaThin,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .navbar a:focus {
@@ -225,7 +270,6 @@ section h2, footer h2 {
     font-size: 40px;
     margin-bottom: 35px;
     padding-top: 70px;
-    font-family: Roboto;
     font-weight: 300;
     text-align: center;
 }
@@ -242,6 +286,29 @@ section.page-header h2{
 .flexslider p{
     text-align: center;
 }
+
+.flexslider .slides > li {
+    height: 250px;
+}
+
+.flexslider .slides > li > a{
+    display: block;
+}
+
+.flexslider .flex-control-nav {
+    background: transparent;
+}
+
+.flexslider .flex-control-paging li a {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    transform: translate3d(0, 0, 0);
+}
+
+    .flexslider .flex-control-paging li a:hover, .flex-control-paging li a.flex-active {
+        background: #fff;
+        border: 2px solid #fff;
+    }
 
 .menu-pointer{
     background-image: url('https://flexberry.github.io/site/img/menu-pointer.png'); 
@@ -571,7 +638,8 @@ a.btn-social {
 .btn-social svg:hover #soc-fb-icon,
 .btn-social svg:hover #soc-tw-icon,
 .btn-social svg:hover #soc-git-icon,
-.btn-social svg:hover #soc-yt-icon{
+.btn-social svg:hover #soc-yt-icon,
+.btn-social svg:hover #soc-gt-icon{
     fill: #650f8b;
 }
 
@@ -741,7 +809,8 @@ NAV
 .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
     overflow: hidden;
     border-radius: 5px;
-    top:60%;
+    top: 60%;
+    border-top: 0;
 }
 
 /*Mega Menu Style Effect*/
@@ -858,17 +927,10 @@ Flexberry Slider
     width: 100%;
     font-size: 20px;
 }
-.flexslider .slides > li {
-    height: 250px;
-}
 
 #flexHome .flex-control-nav {
     text-align: center;
     /*margin-bottom: -44px;*/
-}
-
-.flexslider .flex-control-nav {
-    background: transparent;
 }
 
 .flex-control-nav {
@@ -888,16 +950,6 @@ Flexberry Slider
         zoom: 1;
     }
 
-.flexslider .flex-control-paging li a {
-    background: transparent;
-    border: 2px solid rgba(255,255,255,0.5);
-}
-
-    .flexslider .flex-control-paging li a:hover, .flex-control-paging li a.flex-active {
-        background: #fff;
-        border: 2px solid #fff;
-    }
-
 .flex-control-paging li a {
     width: 11px;
     height: 11px;
@@ -911,11 +963,6 @@ Flexberry Slider
     -o-border-radius: 20px;
     border-radius: 20px;
     box-shadow: inset 0 0 5px rgba(84,84,204,1);
-}
-
-.flexslider .flex-control-paging li a:hover, #sliderWrapper .flex-control-paging li a.flex-active {
-    background: #fff;
-    border: 2px solid #fff;
 }
 
 .flex-control-nav {
@@ -1050,7 +1097,6 @@ section h3, #login-modal h3{
     font-size: 27px;
     font-weight:400;
     margin: 40px 0 20px;
-    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
@@ -1167,6 +1213,7 @@ section .row{
     position: absolute;
     width: 100%;
     color: rgba(255, 255, 255, 0.8);
+    top: -80px;
 }
 
 .nav-mini{
@@ -1424,10 +1471,10 @@ ol ol{
     color: rgba(255, 255, 255, 0.8);
     padding-bottom: 7px;
     padding-top: 7px;
-    -webkit-transition: all .3s ease-in-out;
+    /*-webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;*/
   }
 
   .navbar-fixed-top .navbar-nav .active > a,
@@ -1511,8 +1558,8 @@ ol ol{
   }
 
   .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
-    margin-left: -80px;
-    top: 40%;
+    margin-left: -130px;
+    top: 50%;
   }
 }
 
