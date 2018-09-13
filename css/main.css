@@ -6,52 +6,52 @@
 
 @font-face {
     font-family: HelveticaThin; /* Гарнитура шрифта */
-    src: url('https://flexberry.github.io/site/css/fonts/HelveticaLight/HelveticaLight.ttf'); /* Путь к файлу со шрифтом */ 
+    src: url('http://new.flexberry.net/css/fonts/HelveticaLight/HelveticaLight.ttf'); /* Путь к файлу со шрифтом */ 
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Thin), url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.eot');
-  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.eot#iefix') format("embedded-opentype"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.woff2') format("woff2"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.woff') format("woff"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Thin.ttf') format("truetype");
+  src: local(Roboto Thin), url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Thin.eot');
+  src: url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Thin.eot#iefix') format("embedded-opentype"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Thin.woff2') format("woff2"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Thin.woff') format("woff"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Thin.ttf') format("truetype");
   font-weight: 200; }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Light), url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.eot');
-  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.eot#iefix') format("embedded-opentype"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.woff2') format("woff2"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.woff') format("woff"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Light.ttf') format("truetype");
+  src: local(Roboto Light), url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Light.eot');
+  src: url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Light.eot#iefix') format("embedded-opentype"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Light.woff2') format("woff2"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Light.woff') format("woff"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Light.ttf') format("truetype");
   font-weight: 300; }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Regular), url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.eot');
-  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.eot#iefix') format("embedded-opentype"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.woff2') format("woff2"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.woff') format("woff"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Regular.ttf') format("truetype");
+  src: local(Roboto Regular), url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Regular.eot');
+  src: url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Regular.eot#iefix') format("embedded-opentype"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Regular.woff2') format("woff2"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Regular.woff') format("woff"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Regular.ttf') format("truetype");
   font-weight: 400; }
 
 @font-face {
   font-family: "Roboto";
-  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.eot');
-  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.eot#iefix') format("embedded-opentype"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.woff2') format("woff2"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.woff') format("woff"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Medium.ttf') format("truetype");
+  src: url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Medium.eot');
+  src: url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Medium.eot#iefix') format("embedded-opentype"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Medium.woff2') format("woff2"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Medium.woff') format("woff"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Medium.ttf') format("truetype");
   font-weight: 500; }
 
 @font-face {
   font-family: "Roboto";
-  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.eot');
-  src: url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.eot#iefix') format("embedded-opentype"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.woff2') format("woff2"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.woff') format("woff"), 
-  url('https://flexberry.github.io/site/css/fonts/Roboto/Roboto-Bold.ttf') format("truetype");
+  src: url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Bold.eot');
+  src: url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Bold.eot#iefix') format("embedded-opentype"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Bold.woff2') format("woff2"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Bold.woff') format("woff"), 
+  url('http://new.flexberry.net/css/fonts/Roboto/Roboto-Bold.ttf') format("truetype");
   font-weight: 600; }
 
 body {
@@ -311,7 +311,7 @@ section.page-header h2{
     }
 
 .menu-pointer{
-    background-image: url('https://flexberry.github.io/site/img/menu-pointer.png'); 
+    background-image: url('http://new.flexberry.net/img/menu-pointer.png'); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -529,7 +529,7 @@ footer h3 {
 
 footer .footer-above {
   padding-top: 180px;
-  background-image: url('https://flexberry.github.io/site/img/footer-bg.png');
+  background-image: url('http://new.flexberry.net/img/footer-bg.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -834,14 +834,14 @@ NAV
 .flexberry-logo{
     width: 110px;
     height: 90px;
-    background-image: url('https://flexberry.github.io/site/img/logo.png');
+    background-image: url('http://new.flexberry.net/img/logo.png');
     background-position: 0 4.37px !important;
 }
 
 .flexberry-logo-color {
     width: 60px;
     height: 60px;
-    background-image: url('https://flexberry.github.io/site/img/logo-color.png');
+    background-image: url('http://new.flexberry.net/img/logo-color.png');
     background-size: 100%;
     top: 50px;
     left: calc(50% - 30px);
@@ -851,7 +851,7 @@ NAV
 .flexberry-logo-slide{
     width: 180px;
     height: 180px;
-    background-image: url('https://flexberry.github.io/site/img/logo-slide.png');
+    background-image: url('http://new.flexberry.net/img/logo-slide.png');
     background-size: 100%;
     float: none;
 }
@@ -1035,7 +1035,7 @@ Flexberry Slider
 }
 
 .cover-icon {
-    background-image: url('https://flexberry.github.io/site/img/sol-arrow.png');
+    background-image: url('http://new.flexberry.net/img/sol-arrow.png');
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -1145,7 +1145,7 @@ section .row{
 
 #top-action-zone{
     color: #fff;
-    background-image: url('https://flexberry.github.io/site/img/bg.png');
+    background-image: url('http://new.flexberry.net/img/bg.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -1162,7 +1162,7 @@ section .row{
 
 .success-sta{
     color: #fff;
-    background-image: url('https://flexberry.github.io/site/img/bgsta.png');
+    background-image: url('http://new.flexberry.net/img/bgsta.png');
     background-size: 100% 100%;
     padding-bottom: 130px;
     background-repeat: no-repeat;
